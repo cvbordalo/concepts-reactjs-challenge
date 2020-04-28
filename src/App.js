@@ -3,6 +3,8 @@ import api from './services/api';
 
 import "./styles.css";
 
+import logoImage from './assets/logo.png';
+
 function App() {
 const [repositories, setRepositories] = useState([]);
 
@@ -14,7 +16,7 @@ useEffect(() => {
 
   async function handleAddRepository() {
     const response = await api.post('repositories', {
-      title: 'Umbriel',
+      title: 'teste',
       url: 'https://github.com/rocketseat/umbriel',
       techs: ['Node.js', 'ReactJS']
     })
@@ -31,20 +33,23 @@ useEffect(() => {
   }
 
   return (
-    <div>
+    <div className="content">
+      <div className="header">
+        <img src={logoImage} alt="Logo" />
+        <h1>repo</h1>
+      </div>
+      <button className="btn-add" onClick={handleAddRepository}>Adicionar</button>
       <ul data-testid="repository-list">
-        {repositories.map(repository => (
-          <li key={repository.id}>
-          {repository.title}
-
-          <button onClick={() => handleRemoveRepository(repository.id)}>
-            Remover
-          </button>
-        </li>
-        ))}
-      </ul>
-
-      <button onClick={handleAddRepository}>Adicionar</button>
+          {repositories.map(repository =>
+            <li key={repository.id} className="repository">
+              <h3>{repository.title}</h3>
+              <span className="url">{repository.url}</span>
+              <button onClick={() => handleRemoveRepository(repository.id)}>
+                Remover
+              </button>
+            </li>
+          )}
+      </ul>  
     </div>
   );
 }

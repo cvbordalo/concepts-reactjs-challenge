@@ -6,34 +6,169 @@
 
 body {
   font-size: 14px;
-}
-
-div {
-  width: 100%;
-  margin: 20px;
-}
-
-div li {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+div.content{
+  width: 650px;
+  padding: 48px;
+  background: #e9e9e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+
+div.content div.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+div.content div.header img{
+  width: 140px;
+}
+
+div.content div.header h1{
+  color: #aaa;
+  margin-left: 8px;
+}
+
+div.content button.btn-add{
+  width: 180px;
+  padding: 8px;
+  margin: 24px 0;
+  border: 0;
+  background: #e36209;
+  border-radius: 5px;
+  font-weight: 700;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+div.content ul li{
+  margin: 24px 0;
+  list-style: none;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+}
+
+div.content ul li h3{
+  font-size: 28px;
+  color: #333;
+}
+
+div.content ul li span{
+  font-size: 16px;
+  color: #777;
+}
+
+div.content ul li button{
+  margin-top: 8px;
+  padding: 4px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  background: transparent;
+  color: #e36209;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+div.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+div.content div.header {
+  display: flex;
+  flex-direction: row;
   align-items: center;
 }
-
-div li + li {
-  margin-top: 15px;
+div.content div.header img{
+  width: 140px;
 }
-
-button {
-  background: #7159c1;
+div.content  div.header h1{
+  color: #ccc;
+  margin-left: 8px;
+}
+div.content div#repository-list{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  margin-top: 48px;
+}
+div.content div#repository-list h3{
+  display: flex;
+  align-items: center;
+  line-height: 2.4;
+  font-size: 36px;
+  font-weight: 600;
+  color: #333;
+  height: 48px;
+}
+div.content div#repository-list li.repository{
+  padding: 16px 0;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+}
+div.content div#repository-list li.repository span.url{
+  color: #aaa;
+  font-size: 16px;
+}
+div.content div#repository-list li.repository span.techs{
+  margin-top: 24px;
+  color: #333;
+  font-size: 14px;
+}
+div.content div#repository-list li.repository span.techs a{
+  padding-right: 16px;
+}
+div.content div#repository-list li.repository button{
+  width: 140px;
+  margin: 24px 0;
+  background: #e36209;
+  border-radius: 5px;
   color: #fff;
   border: 0;
   padding: 10px 15px;
   cursor: pointer;
-  margin-top: 15px;
-  font-weight: bold;
   font-size: 14px;
+  font-weight: bold;
 }
-
-div li button {
-  margin: 0 15px;
-  background: #ca4949;
-}
+div.content div.header button{
+  width: 140px;
+  margin: 24px 0;
+  border: 2px solid #e36209;
+  background: #fff;
+  border-radius: 5px;
+  color: #e36209;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 48px;
+} */
