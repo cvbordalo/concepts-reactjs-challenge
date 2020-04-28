@@ -16,8 +16,8 @@ useEffect(() => {
 
   async function handleAddRepository() {
     const response = await api.post('repositories', {
-      title: 'teste',
-      url: 'https://github.com/rocketseat/umbriel',
+      title: `gostack-newrepository-${Date.now()}`,
+      url: `http://repositorio.com/${Date.now()}`,
       techs: ['Node.js', 'ReactJS']
     })
 
