@@ -13,11 +13,21 @@ useEffect(() => {
 }, []);
 
   async function handleAddRepository() {
-    // TODO
+    const response = await api.post('repositories', {
+      title: 'Umbriel',
+      url: 'https://github.com/rocketseat/umbriel',
+      techs: ['Node.js', 'ReactJS']
+    })
+
+    setRepositories([ ...repositories, response.data ]);
   }
 
   async function handleRemoveRepository(id) {
-    // TODO
+    await api.delete(`repositories/${id}`);
+
+    setRepositories(repositories.filter(
+      repository => repository.id !== id
+    ))
   }
 
   return (
@@ -27,7 +37,7 @@ useEffect(() => {
           <li key={repository.id}>
           {repository.title}
 
-          <button onClick={() => handleRemoveRepository(1)}>
+          <button onClick={() => handleRemoveRepository(repository.id)}>
             Remover
           </button>
         </li>
